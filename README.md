@@ -26,3 +26,18 @@ https://www.anaconda.com/
 ```yaml
 conda install -c conda-forge ase
 ```
+
+**PyQSTEM**:
+
+```yaml
+conda install -c conda-forge pyqstem
+```
+
+**tqdm**:
+
+```yaml
+conda install -c conda-forge tqdm
+```
+
+
+
