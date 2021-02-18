@@ -31,6 +31,10 @@ conda install -c conda-forge ase pyqstem tqdm natsort cython
 ```yaml
 pip3 install tensorflow==2.2.0
 ```
+**PyTorch**:
 
+```yaml
+conda install -c pytorch pytorch
+```
 
 
