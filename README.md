@@ -10,7 +10,7 @@ This repository contains the codes to implement a Deep Learning framework to pre
 
 # How to use it 
 
-## Installation
+## 1. Installation
 
 **Python Installation**: 
 
@@ -51,3 +51,6 @@ conda install -c conda-forge scikit-learn
 conda install scikit-image 
 ```
 
+## 2. Python codes
+
+The Python script to run for simulating HRTEM images and the corresponding CHs label maps are *make_NPs_data.py* or its parallelized version (much more efficient!) *make_NPs_data_multiprocessing.py*. The scripts *make_NPs_data_utils* and *make_NPs_statistics.py* are used as dependencies. The scripts generate the folders which contain the training data (simulated HRTEM image and CHs label maps).
