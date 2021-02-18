@@ -56,14 +56,18 @@ conda install scikit-image
 ## 2. Python codes
 ### 2.1 Images Simulation
 
-The Python script to run for simulating HRTEM images and the corresponding CHs label maps are *make_NPs_data.py* or its parallelized version (much more efficient!) *make_NPs_data_multiprocessing.py*. The scripts *make_NPs_data_utils* and *make_NPs_statistics.py* are used as dependencies. The scripts generate the folders which contain the training data (simulated HRTEM image and CHs label maps).
+The Python script to run for simulating HRTEM images and the corresponding CHs label maps are *make_NPs_data.py* or its parallelized version (much more efficient!) *make_NPs_data_multiprocessing.py*. The scripts *make_NPs_data_utils* and *make_NPs_statistics.py* are used as dependencies. The scripts generate the folders which contain the training data (simulated HRTEM image and CHs label maps). The jupyter-notebook *visualize_NPs_data.ipynb* illustrates how the code works step-by-step, providing the explaination for each line.
 
 ```yaml
 python make_NPs_data_multiprocessing.py
 ```
 
 ### 2.2 Deep Learning 
-The folders tf2.2 and pytorch contain the deep learning scripts to run the training and validation of the fully convolutional network (FCN). You can choose to use Tensorflow or PyTorch, depending on your preference. Both the scripts work with the simualted data saved in the folders *training_data* and *test_data*.
+The folders tf2.2 and pytorch contain the deep learning scripts to run the training and test of the fully convolutional network (FCN). You can choose to use Tensorflow or PyTorch, depending on your preference. In both cases the scripts work with the simualted data saved in the folders *training_data* and *test_data*. Training and test are performed simultaneously.
 
 
-Tensp
+**Tensorflow**: the scripts are located in the folder tf2.2. There are three different implentation of the training/validation:
+
+1) *training_data_parallelization.py*: distributed training implemented with data parallelization technique.
+2) *training_model_parallelization.py*: distributed training implemented with model parallelization technique (Horovod)
+3) *training_default.py*: default implementation, with no data distribution.
