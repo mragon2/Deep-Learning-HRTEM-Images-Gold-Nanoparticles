@@ -21,12 +21,16 @@ https://www.anaconda.com/
 
 **Required Pyton Packages**:
 
-**Atomic Simulation Environment, PyQSTEM, tqdm, natsort, cython **:
+**Atomic Simulation Environment, PyQSTEM, tqdm, natsort, cython**:
 
 ```yaml
 conda install -c conda-forge ase pyqstem tqdm natsort cython
 ```
+**Tensorflow 2.2.0**:
 
+```yaml
+pip3 install tensorflow==2.2.0
+```
 
 
 
