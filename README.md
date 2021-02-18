@@ -84,7 +84,8 @@ horovodrun -np 4 -H localhost:4 python training_model_parallelization.py
 ```yaml
 python training_default.py
 ```
-The code generates two folders **training_results** and **test_results**. **training_results** contain three subfolders: 
+The code generates two folders **training_results** and **test_results**. 
+**training_results** contain three subfolders: 
 
 1) **training_learning_curve**: this folder contains two numpy arrays where the training loss and R2 learning curves are stored.
 2) **weights**: this folder contains the weights saved over the epochs during the training of the FCN.
