@@ -52,5 +52,6 @@ conda install scikit-image
 ```
 
 ## 2. Python codes
+### 2.1 Images Simulation
 
 The Python script to run for simulating HRTEM images and the corresponding CHs label maps are *make_NPs_data.py* or its parallelized version (much more efficient!) *make_NPs_data_multiprocessing.py*. The scripts *make_NPs_data_utils* and *make_NPs_statistics.py* are used as dependencies. The scripts generate the folders which contain the training data (simulated HRTEM image and CHs label maps).
