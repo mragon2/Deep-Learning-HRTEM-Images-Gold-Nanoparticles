@@ -67,7 +67,7 @@ The folders tf2.2 and pytorch contain the deep learning scripts to run the train
 
 The codes are implemented with **GPUs distribution** using **data parallelization** and **model parallelization**. The models also benefit of the *mixed precsion* technique (https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html) Mixed precision allows to accelerate the training of DL models on GPUs with computing capability >= 7.0. The tensorflow implementation also benefits of the Accelerated Linear Algebra (XLA) (https://www.tensorflow.org/xla). Both Tensorflow and Pytorch have been implemented using custom training implentation.
 
-**Tensorflow**: the scripts are located in the folder tf2.2. There are three different implentation of the training/validation:
+**2.2.1 Tensorflow**: the scripts are located in the folder tf2.2. There are three different implentation of the training/validation:
 
 1) *training_data_parallelization.py*: distributed training implemented with data parallelization technique. Please run:
 
@@ -88,9 +88,13 @@ The code generates two folders **training_results** and **test_results**. **trai
 2) **weights**: this folder contains the weights saved over the epochs during the training of the FCN.
 3) **debug**: this folder contains the images and labels loaded in each batch. In this way you can check what it is actually going through the network and be sure that everthing works as expected.
 
-The scripts *fcn.py* and *training_utils.py* are used as dependencies. *fcn.py* contains the implementation of the DL model, which is an FCN, while *training_utils.py* contains classes to implement data augmentation and calculation of the R2 score between the predicted and the true CHs for evaluation of the model's performance.
+The scripts *fcn.py* and *training_utils.py* are used as dependencies. *fcn.py* contains the implementation of the DL model, which is an FCN, while *training_utils.py* contains classes to implement data augmentation and calculation of the R2 score between the predicted and the true CHs for evaluation of the model's performance. 
+
+The jupyter-notebook *visualize_training_data-parallelization.ipynb* illustrates how the code works step-by-step, providing the explaination for each line. 
 
 
-**Pytorch**: the scripts are located in the folder pytorch. Similarly to Tensorflow, there are scripts for distributed and default implementations. The framework is equivalent to Tensorflow implementation. The difference in the code is just the PyTorch style.
+**2.2.2 Pytorch**: the scripts are located in the folder pytorch. Similarly to Tensorflow, there are scripts for distributed and default implementations. The framework is equivalent to Tensorflow implementation. The difference in the code is just the PyTorch style.
 
+### 2.3 Application of the trainde Deep Learning model to experimental HRTEM image
+Once the model has achieved a satisfactory performance in the training and test process, it can be applied to predict the atomic CHs of nanoparticles in experimental HRTEM images with high reliability!
 
