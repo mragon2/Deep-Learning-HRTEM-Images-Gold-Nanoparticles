@@ -27,7 +27,7 @@ https://www.anaconda.com/
 conda install -c conda-forge ase pyqstem tqdm natsort cython
 ```
 
-The Deep Learning models are built in both Tensorflow 2.2.0 and PyTorch. The codes are avaiolable in the folder tf2.2 and pytorch. Please install the package you wish to use.
+The Deep Learning models are built in both Tensorflow 2.2.0 and PyTorch. The codes are avaiolable in the folder *tf2.2* and *pytorch*. Please install the package you wish to use.
 
 **Tensorflow 2.2.0**:
 
@@ -39,5 +39,15 @@ pip3 install tensorflow==2.2.0
 ```yaml
 conda install -c pytorch pytorch torchvision
 ```
+**Scikit-Lean**:
 
+```yaml
+conda install -c conda-forge scikit-learn 
+```
+
+**Scikit-Image**:
+
+```yaml
+conda install scikit-image 
+```
 
