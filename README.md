@@ -62,9 +62,8 @@ The Python script to run for simulating HRTEM images and the corresponding CHs l
 python make_NPs_data_multiprocessing.py
 ```
 
-### 2.2 Deep Learning 
-The folders tf2.2 and pytorch contain the deep learning scripts to run the training and test of the fully convolutional network (FCN). You can choose to use Tensorflow or PyTorch, depending on your preference. In both cases the scripts work with the simualted data saved in the folders *training_data* and *test_data*. Training and test are performed simultaneously.
-
+### 2.2 Deep Learning with GPUs parallelization
+The folders tf2.2 and pytorch contain the deep learning scripts to run the training and test of the fully convolutional network (FCN). You can choose to use Tensorflow or PyTorch, depending on your preference. In both cases the scripts work with the simualted data saved in the folders *training_data* and *test_data*. Training and test are performed simultaneously. The codes are implemented with GPUs distribution using data and model parallelization. The models also benefit of the *mixed precsion* technique (https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html). Mixed precision allows to accelerate the training of DL models on GPUs with computing capability >= 7.0. The tensorflow implementation also benefits of the Accelerated Linear Algebra (XLA) (https://www.tensorflow.org/xla). Both Tensorflow and Pytorch have been implemented using custom training implentation.
 
 **Tensorflow**: the scripts are located in the folder tf2.2. There are three different implentation of the training/validation:
 
@@ -73,11 +72,14 @@ The folders tf2.2 and pytorch contain the deep learning scripts to run the train
 ```yaml
 python training_data_parallelization.py
 ```
-3) *training_model_parallelization.py*: distributed training implemented with model parallelization technique (Horovod). Using 4 GPUs, please run:
+2) *training_model_parallelization.py*: distributed training implemented with model parallelization technique (Horovod). Using 4 GPUs, please run:
 ```yaml
 horovodrun -np 4 -H localhost:4 python training_model_parallelization.py
 ```
-4) *training_default.py*: default implementation, with no data distribution. Please run:
+3) *training_default.py*: default implementation, with no data distribution. Please run:
 ```yaml
 python training_default.py
 ```
+
+
+
