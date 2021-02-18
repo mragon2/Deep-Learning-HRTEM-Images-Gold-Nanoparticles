@@ -43,7 +43,7 @@ conda install -c pytorch pytorch torchvision
 ```
 Both Tensorflow 2.2.0 and Pytorch contain a script for model parallelization using the library *Horovod* (https://github.com/horovod/horovod). Please refer to the linked GitHub repository for installing Horovod.
 
-**Scikit-Lean**:
+**Scikit-Learn**:
 
 ```yaml
 conda install -c conda-forge scikit-learn 
