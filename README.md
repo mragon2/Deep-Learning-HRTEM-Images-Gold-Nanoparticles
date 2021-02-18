@@ -12,6 +12,15 @@ This repository contains the codes to implement a Deep Learning framework to pre
 
 ## Installation
 
-**Python Installation*: *Install Python 3.7 in Anaconda:
+**Python Installation**: 
+
+Install Python 3.7 in Anaconda:
 
 https://www.anaconda.com/
+
+
+**Required Pyton Packages**:
+
+**Atomic Simulation Environment**:
+
+>'conda install -c conda-forge ase'
