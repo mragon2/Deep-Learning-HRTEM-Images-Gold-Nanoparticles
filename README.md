@@ -6,4 +6,3 @@ This repository contains the codes to implement a Deep Learning framework to pre
 *Ragone M., Yurkiv V., Song B., Ramasubramanian A., Shabazian-Yassar R., Mashayek F., Atomic column heights detection in metallic nanoparticles using deep convolutional learning, Computational Materials Science,180, (2020) 109722*
 
 
-![plot] file:///Users/marcoragone-macbookpro/Desktop/TOC.png
