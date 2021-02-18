@@ -9,3 +9,5 @@ This repository contains the codes to implement a Deep Learning framework to pre
 ![plot](./TOC.png)
 
 # How to use it 
+
+## Python Package Installation
