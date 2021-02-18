@@ -39,6 +39,8 @@ pip3 install tensorflow==2.2.0
 ```yaml
 conda install -c pytorch pytorch torchvision
 ```
+Both Tensorflow 2.2.0 and Pytorch contain a script for model parallelization using the library *Horovod* (https://github.com/horovod/horovod). Please refer to the linked GitHub repository for installing Horovod.
+
 **Scikit-Lean**:
 
 ```yaml
@@ -55,3 +57,7 @@ conda install scikit-image
 ### 2.1 Images Simulation
 
 The Python script to run for simulating HRTEM images and the corresponding CHs label maps are *make_NPs_data.py* or its parallelized version (much more efficient!) *make_NPs_data_multiprocessing.py*. The scripts *make_NPs_data_utils* and *make_NPs_statistics.py* are used as dependencies. The scripts generate the folders which contain the training data (simulated HRTEM image and CHs label maps).
+
+```yaml
+python make_NPs_data_multiprocessing.py
+```
