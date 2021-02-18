@@ -23,4 +23,6 @@ https://www.anaconda.com/
 
 **Atomic Simulation Environment**:
 
->'conda install -c conda-forge ase'
+```yaml
+conda install -c conda-forge ase
+```
