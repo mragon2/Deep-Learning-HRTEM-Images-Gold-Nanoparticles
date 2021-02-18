@@ -10,4 +10,8 @@ This repository contains the codes to implement a Deep Learning framework to pre
 
 # How to use it 
 
-## Python Package Installation
+## Installation
+
+Install Python 3.7 in Anaconda:
+
+https://www.anaconda.com/
