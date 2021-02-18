@@ -63,4 +63,4 @@ python make_NPs_data_multiprocessing.py
 ```
 
 ### 2.2 Deep Learning 
-The folders tf2.2 and pytorch contain the deep learning scripts to run the training and validation of the fully convolutional network (FCM
+The folders tf2.2 and pytorch contain the deep learning scripts to run the training and validation of the fully convolutional network (FCN)
