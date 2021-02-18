@@ -21,23 +21,12 @@ https://www.anaconda.com/
 
 **Required Pyton Packages**:
 
-**Atomic Simulation Environment**:
+**Atomic Simulation Environment, PyQSTEM, tqdm, natsort, cython **:
 
 ```yaml
-conda install -c conda-forge ase
+conda install -c conda-forge ase pyqstem tqdm natsort cython
 ```
 
-**PyQSTEM**:
-
-```yaml
-conda install -c conda-forge pyqstem
-```
-
-**tqdm**:
-
-```yaml
-conda install -c conda-forge tqdm
-```
 
 
 
