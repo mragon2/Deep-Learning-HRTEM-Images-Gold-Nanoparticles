@@ -65,7 +65,7 @@ python make_NPs_data_multiprocessing.py
 ### 2.2 Deep Learning with GPUs parallelization
 The folders tf2.2 and pytorch contain the deep learning scripts to run the training and test of the fully convolutional network (FCN). You can choose to use Tensorflow or PyTorch, depending on your preference. In both cases the scripts work with the simualted data saved in the folders *training_data* and *test_data*. Training and test are performed simultaneously. 
 
-The codes are implemented with GPUs distribution using data and model parallelization. The models also benefit of the *mixed precsion* technique (https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html) Mixed precision allows to accelerate the training of DL models on GPUs with computing capability >= 7.0. The tensorflow implementation also benefits of the Accelerated Linear Algebra (XLA) (https://www.tensorflow.org/xla). Both Tensorflow and Pytorch have been implemented using custom training implentation.
+The codes are implemented with **GPUs distribution** using **data parallelization** and **model parallelization**. The models also benefit of the *mixed precsion* technique (https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html) Mixed precision allows to accelerate the training of DL models on GPUs with computing capability >= 7.0. The tensorflow implementation also benefits of the Accelerated Linear Algebra (XLA) (https://www.tensorflow.org/xla). Both Tensorflow and Pytorch have been implemented using custom training implentation.
 
 **Tensorflow**: the scripts are located in the folder tf2.2. There are three different implentation of the training/validation:
 
@@ -88,7 +88,9 @@ The code generates two folders **training_results** and **test_results**. **trai
 2) **weights**: this folder contains the weights saved over the epochs during the training of the FCN.
 3) **debug**: this folder contains the images and labels loaded in each batch. In this way you can check what it is actually going through the network and be sure that everthing works as expected.
 
+The scripts *fcn.py* and *training_utils.py* are used as dependencies. *fcn.py* contains the implementation of the DL model, which is an FCN, while *training_utils.py* contains classes to implement data augmentation and calculation of the R2 score between the predicted and the true CHs for evaluation of the model's performance.
 
-**Pytorch**: the scripts are located in the folder pytorch.
+
+**Pytorch**: the scripts are located in the folder pytorch. Similarly to Tensorflow, there are scripts for distributed and default implementations. The framework is equivalent to Tensorflow implementation. The difference in the code is just the PyTorch style.
 
 
