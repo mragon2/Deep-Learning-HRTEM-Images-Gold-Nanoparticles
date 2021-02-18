@@ -90,6 +90,9 @@ The code generates two folders **training_results** and **test_results**. **trai
 2) **weights**: this folder contains the weights saved over the epochs during the training of the FCN.
 3) **debug**: this folder contains the images and labels loaded in each batch. In this way you can check what it is actually going through the network and be sure that everthing works as expected.
 
+**test_results** contain the subfolder: 
+1) **test_learning_curve**: this folder contains two numpy arrays where the test loss and R2 learning curves are stored.
+
 The scripts *fcn.py* and *training_utils.py* are used as dependencies. *fcn.py* contains the implementation of the DL model, which is an FCN, while *training_utils.py* contains classes to implement data augmentation and calculation of the R2 score between the predicted and the true CHs for evaluation of the model's performance. 
 
 The jupyter-notebook *visualize_training_data-parallelization.ipynb* illustrates how the code works step-by-step, providing the explaination for each line. 
