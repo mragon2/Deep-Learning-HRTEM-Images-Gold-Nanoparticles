@@ -21,7 +21,7 @@ Install Python 3.7 in Anaconda:
 https://www.anaconda.com/
 
 
-**Required Pyton Packages**:
+**Required Python Packages**:
 
 **Atomic Simulation Environment, PyQSTEM, tqdm, natsort, cython**:
 
