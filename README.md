@@ -29,7 +29,7 @@ https://www.anaconda.com/
 conda install -c conda-forge ase pyqstem tqdm natsort cython
 ```
 
-The Deep Learning models are built in both Tensorflow 2.2.0 and PyTorch. The codes are avaiolable in the folder **tf2.2** and **pytorch**. Please install the package you wish to use.
+The Deep Learning models are built in both Tensorflow 2.2.0 and PyTorch. The codes are available in the folder **tf2.2** and **pytorch**. Please install the package you wish to use.
 
 **Tensorflow 2.2.0**:
 
@@ -58,7 +58,12 @@ conda install scikit-image
 ## 2. Python codes
 ### 2.1 Images Simulation
 
-The Python script to run for simulating HRTEM images and the corresponding CHs label maps are *make_NPs_data.py* or its parallelized version (much more efficient!) *make_NPs_data_multiprocessing.py*. The scripts *make_NPs_data_utils* and *make_NPs_statistics.py* are used as dependencies. The scripts generate the folders which contain the training data (simulated HRTEM image and CHs label maps). The jupyter-notebook *visualize_NPs_data.ipynb* illustrates how the code works step-by-step, providing the explaination for each line. Please run:
+The Python script to run for simulating HRTEM images and the corresponding CHs label maps are *make_NPs_data.py* or its parallelized version (much more efficient!) *make_NPs_data_multiprocessing.py*. The scripts *make_NPs_data_utils* and *make_NPs_statistics.py* are used as dependencies. The scripts generate the folders which contain the training/test data (simulated HRTEM image and CHs label maps). The jupyter-notebook *visualize_NPs_data.ipynb* illustrates how the code works step-by-step, providing the explaination for each line. Please run:
+
+```yaml
+python make_NPs_data_multiprocessing.py
+```
+or its parallel version:
 
 ```yaml
 python make_NPs_data_multiprocessing.py
