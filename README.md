@@ -107,6 +107,7 @@ The jupyter-notebook *visualize_training_data-parallelization.ipynb* illustrates
 
 **2.2.2 Pytorch**: the scripts are located in the folder pytorch. Similarly to Tensorflow, there are scripts for distributed and default implementations. The framework is equivalent to Tensorflow implementation. The difference in the code is just the PyTorch style.
 
-### 2.3 Application of the trainde Deep Learning model to experimental HRTEM image
+### 2.3 Application of the trained
+ Deep Learning model to experimental HRTEM image
 Once the model has achieved a satisfactory performance in the training and test process, it can be applied to predict the atomic CHs of nanoparticles in experimental HRTEM images with high reliability!
 
