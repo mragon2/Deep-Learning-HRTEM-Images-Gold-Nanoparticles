@@ -76,16 +76,16 @@ The codes are implemented with **GPUs distribution** using **data parallelizatio
 
 **2.2.1 Tensorflow**: the scripts are located in the folder tf2.2. There are three different implentation of the training/validation:
 
-1) *training_data_parallelization.py*: distributed training implemented with data parallelization technique. Please run:
+1) *training_data_parallelization.py*: distributed training implemented with data parallelization technique. Run:
 
 ```yaml
 python training_data_parallelization.py
 ```
-2) *training_model_parallelization.py*: distributed training implemented with model parallelization technique (Horovod). Using 4 GPUs, please run:
+2) *training_model_parallelization.py*: distributed training implemented with model parallelization technique (Horovod). Using 4 GPUs, run:
 ```yaml
 horovodrun -np 4 -H localhost:4 python training_model_parallelization.py
 ```
-3) *training_default.py*: default implementation, with no data distribution. Please run:
+3) *training_default.py*: default implementation, with no data distribution. Run:
 ```yaml
 python training_default.py
 ```
