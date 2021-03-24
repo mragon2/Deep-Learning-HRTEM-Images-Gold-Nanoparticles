@@ -74,7 +74,7 @@ The folders tf2.2 and pytorch contain the deep learning scripts to run the train
 
 The codes are implemented with **GPUs distribution** using **data parallelization** and **model parallelization**. The models also benefit of the *mixed precsion* technique (https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html) Mixed precision allows to accelerate the training of DL models on GPUs with computing capability >= 7.0. The tensorflow implementation also benefits of the Accelerated Linear Algebra (XLA) (https://www.tensorflow.org/xla). Both Tensorflow and Pytorch have been implemented using custom training implentation.
 
-**2.2.1 Tensorflow**: the scripts are located in the folder tf2.2. There are three different implentation of the training/validation:
+**2.2.1 Tensorflow**: the scripts are located in the folder Tensorflow2.2. There are three different implentation of the training/validation:
 
 1) *training_data_parallelization.py*: distributed training implemented with data parallelization technique. Run:
 
@@ -105,7 +105,7 @@ The scripts *fcn.py* and *training_utils.py* are used as dependencies. *fcn.py* 
 The jupyter-notebook *visualize_training_data-parallelization.ipynb* illustrates how the code works step-by-step, providing the explaination for each line. 
 
 
-**2.2.2 Pytorch**: the scripts are located in the folder pytorch. Similarly to Tensorflow, there are scripts for distributed and default implementations. The framework is equivalent to Tensorflow implementation. The difference in the code is just the PyTorch style.
+**2.2.2 PyTorch**: the scripts are located in the folder PyTorch. Similarly to Tensorflow, there are scripts for distributed and default implementations. The framework is equivalent to Tensorflow implementation. The difference in the code is just the PyTorch style.
 
 ### 2.3 Application of the trained
  Deep Learning model to experimental HRTEM image
