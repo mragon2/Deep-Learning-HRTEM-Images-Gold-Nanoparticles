@@ -54,11 +54,6 @@ if __name__ == "__main__":
     loss_object = tf.keras.losses.MeanSquaredError()
 
 
-    if hvd.local_rank() == 0:
-
-        print_devices(num_devices)
-
-
     first_epoch = 0
     num_epochs = 500
 
@@ -80,6 +75,12 @@ if __name__ == "__main__":
         test_loss_learning_curve = list(np.load(os.path.join(test_results_folder_path, 'learning_curve/test_loss_learning_curve.npy')))
         test_r2_learning_curve = list(np.load(os.path.join(test_results_folder_path, 'learning_curve/test_r2_learning_curve.npy')))
 
+    
+    if hvd.local_rank() == 0:
+
+        print_devices(num_devices)
+
+    
     for epoch in range(first_epoch, first_epoch + num_epochs):
 
         total_train_loss = 0.0
