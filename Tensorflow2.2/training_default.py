@@ -72,7 +72,7 @@ if __name__ == "__main__":
         test_loss_learning_curve = list(np.load(os.path.join(test_results_folder_path, 'learning_curve/test_loss_learning_curve.npy')))
         test_r2_learning_curve = list(np.load(os.path.join(test_results_folder_path, 'learning_curve/test_r2_learning_curve.npy')))
 
-   print_devices(num_devices)
+    print_devices(num_devices)
 
     for epoch in range(first_epoch, first_epoch + num_epochs):
 
