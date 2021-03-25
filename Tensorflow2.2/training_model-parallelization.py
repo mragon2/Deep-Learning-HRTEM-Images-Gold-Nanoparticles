@@ -171,7 +171,7 @@ if __name__ == "__main__":
                              np.array(test_loss_learning_curve),
                              np.array(train_r2_learning_curve),
                              np.array(test_r2_learning_curve),
-                             path = 'results_model-parallelization/'))
+                             path = 'results_model-parallelization/')
 
         if epoch % save_every == 0:
             model.save_weights(os.path.join(training_results_folder_path, 'weights/epoch-{}.h5'.format(epoch + 1)))
